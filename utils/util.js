@@ -1,12 +1,3 @@
-// +----------------------------------------------------------------------
-// | 工具类
-// +----------------------------------------------------------------------
-// | Copyright (c) 2016-2017 http://www.e2862.com All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: 暴雪嘉年华 <BlizzardCarnival@gmail.com>
-// +----------------------------------------------------------------------
 
 /**
  * 加载SDK库
@@ -88,7 +79,6 @@ function login(app,userInfo,pages) {
 *          showCancel: 是否显示取消按钮
 *          trueFunction: 用户点击 回调函数         
 *          falseFunction 用户取消 回调函数
-* @:author: ghl guhongliang@e2862.com
 */
 function getUserInfo(that) {
   var user_info = that.GO.user_info;
@@ -104,7 +94,6 @@ function getUserInfo(that) {
 * @:param: title: 提示文字
 *          icon: 'success'或者'loading'
 *          duration: 延迟时间,默认10000(最大)
-* @:author: ghl guhongliang@e2862.com
 */
 function showToast(title = '', icon = 'loading', duration = 60000, img) {
   if (img != null && img != '') {
@@ -129,7 +118,6 @@ function showToast(title = '', icon = 'loading', duration = 60000, img) {
 /**
  * @title 判断用户是否登录
  * @param obj 不同的登录判断  shopping: '我的'  ,common: 其他各处
- * @author ghl<guhongliang@e2862.com>
  * @return void
  */
 function isLogin(obj) {
@@ -152,7 +140,6 @@ function isLogin(obj) {
 }
 /**
  * @title 字符串转年月日日期
- * @author ghl<guhongliang@e2862.com>
  * @return date
  */
 function stringToDate(str) {
@@ -167,7 +154,6 @@ function stringToDate(str) {
 
 /**
  * @title: rpx 转换 px值
- * @author: 空哥<277409083@qq.com>
  * @params: rpx值
  * @return: px值 
  */
@@ -182,7 +168,6 @@ function rpxTopx(rpx) {
 
 /**
  * 四舍五入函数
- * @author 空哥<lzkandlt@qq.com>
  * @param src 表示要转换的值
  * @param pos 保留几位小数
  * @return 转换处理之后的值
@@ -195,7 +180,6 @@ function round(src, pos) {
 
 /**
  * 手机绑定提示
- * @author 顾宏亮<guhongliang@qq.com>
  * @return void
  */
 function checkSigninId() {
@@ -209,7 +193,6 @@ function checkSigninId() {
 }
 /**
  * 跳转手机绑定界面
- * @author 顾宏亮<guhongliang@qq.com>
  * @return void
  */
 function goBindPhone() {

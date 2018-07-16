@@ -33,7 +33,7 @@ App({
     this.GO.scene = options.scene;  //场景值
     this.GO.util = util
     this.getSystemInfo();
-    this.login(this).then(this.loginSu, this.loginFail)
+    // this.login(this).then(this.loginSu, this.loginFail)
   },
 
   /*
@@ -51,7 +51,7 @@ App({
 
   //登陆
   login(app) {
-    var url = app.GO.api + "/service/passport/signin"
+    var url = app.GO.api + ""   //鉴权接口使用
     let form_data = {}
     let session_id = util.cache.getStorage('user_info') != null ? util.cache.getStorage('user_info').sessionId : ''
     return new Promise((resolve, reject) => {

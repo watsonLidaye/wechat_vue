@@ -1,6 +1,6 @@
 
 var common = require('common');
-var app_id = "wxaaa2807e6a74ed2f";
+var app_id = "";
 
 var serive = {
 };
@@ -15,14 +15,14 @@ var path = [
 
 var url = {
   master: {  /* 正式环境配置 */
-    api: 'https://api.tianxiadianjia.com/',
-    pay: 'https://api.tianxiadianjia.com/',
-    img_path: "https://api.tianxiadianjia.com/"
+    api: '',
+    pay: '',
+    img_path: ""
   },
   debug: {   /* 测试环境配置 */
-    api: 'https://csapi.tianxiadianjia.com/',
-    pay: 'https://csapi.tianxiadianjia.com/',
-    img_path: "https://csapi.tianxiadianjia.com/"
+    api: '',
+    pay: '',
+    img_path: ""
   },
 }
 var url_address = (function () {
