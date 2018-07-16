@@ -1,0 +1,51 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.8",
+	"appid": "wxaaa2807e6a74ed2f",
+	"projectname": "%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96",
+	"packOptions": {
+		"ignore": [
+			{
+				"type": "file",
+				"value": "README.md"
+			},
+			{
+				"type": "prefix",
+				"value": "LICENSE"
+			},
+			{
+				"type": "prefix",
+				"value": ".gitignore"
+			}
+		]
+	},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
+}

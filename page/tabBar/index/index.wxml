@@ -1,0 +1,1 @@
+    <loadding show_type="{{show_hide}}" bindrefreshLoading="refresh"></loadding>  

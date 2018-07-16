@@ -1,0 +1,39 @@
+.loadding{
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:100
+}
+.w80h80{
+  width: 80rpx;
+  height: 80rpx;
+  background: transparent;
+}
+.pt300{
+  padding-top: 300rpx;
+}
+.juc_colum_b{
+  display: flex;
+flex-direction: column;
+}
+.w260h200{
+  width: 260rpx;
+  height: 200rpx;
+  background: transparent;
+}
+.err_text{
+  width: 100%;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+
+}
+.err_button{
+  padding: 8rpx 20rpx;
+  font-size: 26rpx;
+}

@@ -1,0 +1,26 @@
+<!--加载状态的template  -->
+<view>
+  <!--加载中-->
+  <block wx:if="{{show_type==0}}">
+    <view class="loadding" style="height:{{loadding_height}}px" >
+  
+      <view class="">
+        <image class="w80h80" src="http://e2862-wx-app.oss-cn-hangzhou.aliyuncs.com/bank_sever/84.gif"></image>
+      </view>
+    </view>
+  </block>
+  <!--网络错误-->
+   <block wx:if="{{show_type==2}}">
+    <view class="loadding pt300">
+      <view class="juc_colum_b">
+        <image class="w260h200" src="http://e2862-wx-app.oss-cn-hangzhou.aliyuncs.com/restaurant/red/6_model/ico3.png"></image>
+        <text class="err_text">网络加载错误</text>
+         <button class="err_button" bindtap="refresh">重新加载</button>
+        <view>
+         
+        </view>
+      </view>
+    </view>
+  </block> 
+
+</view>
