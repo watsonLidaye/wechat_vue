@@ -11,7 +11,11 @@ Page({
   },
   //页面初始化
   onLoad: function (options) {
-
+    var worker = wx.createWorker('workers/index.js') // 文件名指定 worker 的入口文件路径，绝对路径
+    worker.postMessage({
+      msg: 'hello worker'
+    })
+    worker.terminate
   },
   onShow: function () {
   },

@@ -11,6 +11,7 @@
       ]
     }
   ],
+    "workers": "workers",
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarTitleText": "用户",
