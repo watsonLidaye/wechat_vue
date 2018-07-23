@@ -25,7 +25,6 @@ Component({
 
   },
   attached(){
-   
     this.setData({ loadding_height: app.GO.windowHeight})
   },
   methods:{

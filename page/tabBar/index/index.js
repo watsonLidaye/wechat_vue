@@ -21,6 +21,9 @@ Page({
 
   },//重载
   refresh() {
-
+    this.setData({ show_hide: 1 })
+  },
+  cheange(){
+    this.setData({show_hide:2})
   }
 })
