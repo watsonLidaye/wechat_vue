@@ -11,11 +11,21 @@ Page({
   },
   //页面初始化
   onLoad: function (options) {
+    console.log()
     var worker = wx.createWorker('workers/index.js') // 文件名指定 worker 的入口文件路径，绝对路径
     worker.postMessage({
       msg: 'hello worker'
     })
     worker.terminate
+
+
+    let obj1={
+      a:1
+    }
+    let obj2="213"
+    console.log(util)
+    let compary = new util.ObjectCpm(obj1, obj2,this)
+    compary.resultOp()
   },
   onShow: function () {
   },

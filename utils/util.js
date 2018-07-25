@@ -203,6 +203,109 @@ function goBindPhone() {
   }
 }
 
+
+
+/**
+ * @title 比较两个对象得操作
+ * @param 
+ * @author lpf<lipeifeng@e2862.com>
+ * @return String 
+ */
+
+
+class ObjectCpm{
+  constructor (obj1,obj2,pages){
+    this.result=[];
+    this.item="";
+    this.obj1 = obj1;
+    this.obj2 = obj2;
+    this.pages = pages;
+    (function(){
+        try {
+          if (Object.prototype.toString.call(obj1) != '[object Object]') throw new Error('第一的参数必须是对象')
+          if (Object.prototype.toString.call(obj2) != '[object Object]') throw new Error('第二的参数必须是对象')
+          if (Object.prototype.toString.call(page.onHide) != '[object Function]') throw '必须把page传入'    
+        } catch (err) {
+          throw err
+        }
+    })()
+  }
+  // 比较类
+  compary(){
+    let result = this.result
+    let item = this.item
+    let obj1 = this.obj1
+    let obj2 = this.obj2
+    for (let i in obj1) {
+      switch (Object.prototype.toString.call(obj1[i])) {
+        case "[object Number]":
+          item = obj1[i] != obj2[i] && i
+          result.push(item)
+          break;
+        case "[object String]":
+          item = obj1[i] != obj2[i] && i
+          result.push(item)
+          break;
+        case "[object Boolean]":
+          item = obj1[i] != obj2[i] && i
+          result.push(item)
+          break;
+        case "[object Object]":
+          let objectChange = true
+          let resluts = ObjectCpm(obj1[i], obj2[i])
+          for (let j in resluts) {
+            if (resluts[j] != false) {
+              objectChange = false
+            }
+          }
+          item = !objectChange && i
+          result.push(item)
+          break;
+        case "[object Array]":
+          let items = obj1[i],
+            objectChanges = true
+
+          if (obj1[i].length != obj2[i].length) {
+            item = i
+          } else {
+            for (let z in obj1[i]) {
+              if (Object.prototype.toString.call(obj1[i][z]) == "[object Object]") {
+                let resluts = ObjectCpm(obj1[i][z], obj2[i][z])
+                for (let m in resluts) {
+                  if (resluts[m] != false) {
+                    objectChanges = false
+                  }
+                }
+                item = !objectChanges && i
+              } else {
+                item = obj1[i][z] != obj2[i][z] && i
+              }
+            }
+          }
+
+          result.push(item)
+          break;
+      }
+    }
+    return result
+  }
+  //结果类
+  resultOp(){
+    let page = this.pages
+    let resluts = this.compary()
+    let obj2 = this.obj2
+    for (let i = 0; i < resluts.length; i++) {
+      if (resluts[i] != false) {
+        page.setData({ [resluts[i]]: obj2[resluts[i]] })
+      }
+    }
+  }
+}
+
+
+
+
+
 module.exports = {
   // SDK库
   common: common,
@@ -221,5 +324,6 @@ module.exports = {
   round: round,
   stringToDate: stringToDate,
   checkSigninId: checkSigninId,
-  goBindPhone: goBindPhone
+  goBindPhone: goBindPhone,
+  ObjectCpm: ObjectCpm
 }
