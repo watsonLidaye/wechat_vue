@@ -42,6 +42,7 @@ tabbar                //分包主包位置
     
 	util.js             //工具口统一出口
  
+--workers        //多线程文件夹
 app.js
  
 app.json
