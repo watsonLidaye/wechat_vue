@@ -17,15 +17,14 @@ Page({
       msg: 'hello worker'
     })
     worker.terminate
-
-
-    let obj1={
+    var od={
       a:1
     }
-    let obj2="213"
-    console.log(util)
-    let compary = new util.ObjectCpm(obj1, obj2,this)
-    compary.resultOp()
+    var od2 = {
+      a: 2
+    }
+    var arr = new util.ObjectCpm(od, od2,this)
+    arr.resultOp(0)
   },
   onShow: function () {
   },

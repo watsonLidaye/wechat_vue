@@ -216,7 +216,7 @@ function goBindPhone() {
 class ObjectCpm{
   constructor (obj1,obj2,pages){
     this.result=[];
-    this.item="";
+    this.item=""
     this.obj1 = obj1;
     this.obj2 = obj2;
     this.pages = pages;
@@ -224,7 +224,7 @@ class ObjectCpm{
         try {
           if (Object.prototype.toString.call(obj1) != '[object Object]') throw new Error('第一的参数必须是对象')
           if (Object.prototype.toString.call(obj2) != '[object Object]') throw new Error('第二的参数必须是对象')
-          if (Object.prototype.toString.call(page.onHide) != '[object Function]') throw '必须把page传入'    
+          if (Object.prototype.toString.call(pages.onHide) != '[object Function]') throw '必须把page传入'    
         } catch (err) {
           throw err
         }
