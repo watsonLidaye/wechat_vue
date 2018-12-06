@@ -28,7 +28,6 @@ var url = {
 var url_address = (function () {
   let url_config = {}
   if (common.defaultBranch() == 'master') {
-
     url_config.api = url.master.api;
     url_config.pay_api = url.master.pay;
     url_config.img_path = url.master.img_path;

@@ -33,6 +33,7 @@ tabbar                //分包主包位置
 --utils                 
   
 	--sdk                 //封装了部分sdk库
+  common.wxs            //过滤器
     
 	...
     

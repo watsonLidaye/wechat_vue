@@ -14,8 +14,6 @@ var ui = require('./sdk/ui');
 var md5 = require('./sdk/md5');
 
 
-
-
 /*
  *@: title: 用户登录Login
  *@: params 

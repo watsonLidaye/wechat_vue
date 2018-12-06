@@ -7,7 +7,8 @@ var utill = require('../../../utils/util.js')
 
 Page(Object.assign({}, utill,{
   data: {
-    show_hide: 0
+    show_hide: 0,
+    nums:1
   },
   //页面初始化
   onLoad: function (options) {

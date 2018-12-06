@@ -1,0 +1,8 @@
+function addOne(num){
+  num =num + 1
+  return num
+}
+
+module.exports = {
+  addOne: addOne
+}
