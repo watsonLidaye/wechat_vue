@@ -1,4 +1,5 @@
-<wxs src="../../../utils/common.wxs" module="m1" />
+<!-- <wxs src="../../../utils/common.wxs" module="m1" />
     <loadding show_type="{{show_hide}}" bindrefreshLoading="refresh">
         <view>这里是插入到组件slot中的内容</view>
-    </loadding>  
+    </loadding>   -->
+    <view bindtap="submit" data-index='app'>按钮点击</view>

@@ -1,6 +1,7 @@
 // page/index/index/index.js
 ///index.js
 //获取应用实例
+
 var app = getApp();
 import config from '../../../utils/config.js'
 var utill = require('../../../utils/util.js')
@@ -8,10 +9,25 @@ var utill = require('../../../utils/util.js')
 Page(Object.assign({}, utill,{
   data: {
     show_hide: 0,
-    nums:1
+    nums:1,
+    objs:[
+      {name:'watson',ages:27},
+      { name: 'suopha', ages: 22 },
+    ]
+  },
+  submit(e){
+    console.log()
+    this[e.currentTarget.dataset.index]()
+  },
+  app(){
+    console.log('打印出了东西')
   },
   //页面初始化
   onLoad: function (options) {
+    [...this.data.objs].forEach(item=>{
+      console.log(item)
+    })
+    
     console.log(this)
     var worker = wx.createWorker('workers/index.js') // 文件名指定 worker 的入口文件路径，绝对路径
     worker.postMessage({
